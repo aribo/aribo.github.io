@@ -4,68 +4,53 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gun control in the US</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <script> // With JQuery
-              $('#ex1').slider({
-                formatter: function(value) {
-                  return 'Current value: ' + value;
-                }
-              });
-    </script>
+    <title>Gun control in the US</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-slider.css" rel="stylesheet">
+
 
     <style type="text/css" media="screen">
+
       #ex1Slider .slider-selection {
                 background: #BABABA;
               }
-
     </style>
+
+
+
   </head>
+
   <body>
-    <div class="container" style="width: 650px;">
-      <div class="row">
-        <div class="col-lg-12">
-            <h1 class="text-center">Title</h1>
-            <hr/>
-            <br/>
-        </div>
-        <div id="loader">
-          <p class="text-center">Loading...</p>
-        </div>
-        <div id="content" class="text-center" >
-          <p>
-            Bet on...
-            Current bets <span class="token-price"></span> Ether. Actualmente tienes <span class="rico-balance"></span>&nbsp; ETH.
-          </p>
-          <br/>
-          <form onSubmit="App.buyShares(); return false;" role="form">
-            <div class="form-group">
-              <div class="input-group">
-                <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-                <input id="valueToBet" class="form-control input-lg" type="number" name="number" placeholder="Value">
-                </input>
-                <input id="chancesToBet" class="form-control input-lg" type="number" name="number" min="0" placeholder="Chances">
-                </input>
-                <span class="input-group-btn">
-                  <button type="submit" class="btn btn-primary btn-lg">Bet</button>
-                </span>
-              </div>
-            </div>
-          </form>
-          <br>
-           <div class="progress">
-              <div id="progress" class="progress-bar progress-bar-striped active" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          <p><span class="tokens-sold"></span> / <span class="tokens-available"></span> Sold</p>
-          <hr>
-          <p id="accountAddress"></p>
-        </div>
+    <div class="container">
+      <div class="well">
+        <input id="ex1" data-slider-id="ex1Slider" type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
       </div>
     </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-slider.js"></script>
+
+          <script type="text/javascript">
+
+          $(document).ready(function() {
+
+            // With JQuery
+            $('#ex1').slider({
+              formatter: function(value) {
+                return 'Current value: ' + value;
+              }
+            });
+
+          }
+
+          </script>
+
+    </script>
 
       </body>
 </html>
